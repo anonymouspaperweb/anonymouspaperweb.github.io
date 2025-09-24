@@ -70,39 +70,29 @@
     <!-- Main Content -->
     <main class="container">
         <!-- TLDR/Highlights Section -->
-        <section class="row" id="tldr">
+        <section class="row mt-5 mb-5" id="tldr">
             <div class="col-lg-11 mx-auto">
-                <div class="tldr-box p-4 rounded mb-5 mt-4" style="background-color: rgba(239, 246, 255, 0.7); border: 1px solid rgba(59, 130, 246, 0.3); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);">
-                    <h2 class="mb-3 text-center" style="color: var(--primary-color); font-size: 2.2rem; font-weight: 700; letter-spacing: 1px;"> Highlights</h2>
-                    <div class="p-4 mb-4 rounded" style="background-color: rgba(255, 255, 255, 0.9); border-left: 5px solid var(--primary-color);">
-                        <p class="lead fw-bold mb-0" style="color: var(--primary-color); font-size: 1.4rem; text-align: left;">
-                            How do LLMs, pre-trained only on language, develop rich visual priors?
-                        </p>
-                    </div>
-                    <p class="lead" style="font-size: 1.2rem; font-weight: 400; text-align: left;">
-                        Our work systematically reveals that LLMs don't just accidentally learn about the visual world; they develop distinct <strong>visual priors</strong> from language pre-training. We show these priors are composed of two separable components: a <strong>reasoning prior</strong> and a <strong>perception prior</strong>, each with unique origins. This allows us to create a data-centric recipe to deliberately cultivate visual abilities in LLMs from the ground up.
+                <h2 class="section-title">Highlights</h2>
+                <div class="alert mt-4" role="alert" style="background-color: rgba(239, 246, 255, 0.9); border-left: 5px solid var(--primary-color);">
+                    <p class="lead fw-bold mb-0" style="color: var(--primary-color); font-size: 1.4rem; text-align: left;">
+                        How do LLMs, pre-trained only on language, develop rich visual priors?
                     </p>
-                    <div class="key-findings mt-4">
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <div class="finding-card p-3 rounded shadow-sm h-100" style="border-top: 4px solid var(--primary-color);">
-                                    <h5 style="color: var(--primary-color);"><i class="fas fa-brain me-2"></i>Reasoning from coding/math/academic</h5>
-                                    <p class="mb-0 small">An LLM's visual <strong>reasoning</strong> ability is primarily developed by pre-training on reasoning-centric data like code, math, and academic texts.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <div class="finding-card p-3 rounded shadow-sm h-100" style="border-top: 4px solid var(--secondary-color);">
-                                    <h5 style="color: var(--secondary-color);"><i class="fas fa-eye me-2"></i>Perception from diversity</h5>
-                                    <p class="mb-0 small">The visual <strong>perception</strong> ability emerges more diffusely from broad, diverse corpora (like web-crawl) rather than a specific data type.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <div class="finding-card p-3 rounded shadow-sm h-100" style="border-top: 4px solid var(--accent-color);">
-                                    <h5 style="color: var(--accent-color);"><i class="fas fa-cogs me-2"></i>A vision-aware pre-training recipe</h5>
-                                    <p class="mb-0 small">The optimal data mix for pre-training vision-aware LLMs is heavily skewed towards reasoning data (>50%) with a smaller portion about visual-world (~15%).</p>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <p class="mt-3" style="font-size: 1.1rem; font-weight: 400; text-align: left;">
+                    Our work systematically reveals that LLMs don't just accidentally learn about the visual world; they develop distinct <strong>visual priors</strong> from language pre-training. We show these priors are composed of two separable components: a <strong>reasoning prior</strong> and a <strong>perception prior</strong>, each with unique origins. This allows us to create a data-centric recipe to deliberately cultivate visual abilities in LLMs from the ground up.
+                </p>
+                <div class="mt-4">
+                    <div class="settings-card">
+                        <h5><i class="fas fa-brain me-2"></i>Reasoning from Coding/Math/Academic</h5>
+                        <p class="mb-0">An LLM's visual <strong>reasoning</strong> ability is primarily developed by pre-training on reasoning-centric data like code, math, and academic texts.</p>
+                    </div>
+                    <div class="settings-card" style="border-left-color: var(--secondary-color);">
+                        <h5><i class="fas fa-eye me-2"></i>Perception from Diversity</h5>
+                        <p class="mb-0">The visual <strong>perception</strong> ability emerges more diffusely from broad, diverse corpora (like web-crawl) rather than a specific data type.</p>
+                    </div>
+                    <div class="settings-card" style="border-left-color: var(--accent-color);">
+                        <h5><i class="fas fa-cogs me-2"></i>A Vision-Aware Pre-training Recipe</h5>
+                        <p class="mb-0">The optimal data mix for pre-training vision-aware LLMs is heavily skewed towards reasoning data (>50%) with a smaller portion about visual-world (~15%).</p>
                     </div>
                 </div>
             </div>
@@ -364,13 +354,14 @@
         </section>
 
 
-
-        <!-- FAQ Section -->
+         
+<!-- FAQ Section -->
         <section id="faq" class="mt-2">
             <div class="row">
                 <div class="col-lg-11 mx-auto">
                     <h2 class="section-title">FAQ</h2>
                     <div class="accordion" id="faqAccordion">
+                        <!-- Item 1: Open by default -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -383,18 +374,20 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Item 2: Collapsed by default -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="TRUE" aria-controls="collapseTwo">
                                     What is the difference between the 'perception' and 'reasoning' priors?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p><strong>Perception</strong> is the ability to 'see' the image—to process raw visual information like recognizing objects. In contrast, <strong>reasoning</strong> is the ability to think through and solve a visual problem, which requires logical inference. Our work shows that perception largely comes from broad, diverse text, while reasoning is primarily cultivated from structured, logic-centric text like code.</p>
+                                    <p>Perception is the ability to 'see' the image—to process raw visual information like recognizing objects. In contrast, reasoning is the ability to think through and solve a visual problem, which requires logical inference. Our work shows that perception largely comes from broad, diverse text, while reasoning is primarily cultivated from structured, logic-centric text like code.</p>
                                 </div>
                             </div>
                         </div>
+                        <!-- Item 3: Collapsed by default -->
                          <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -407,6 +400,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Item 4: Collapsed by default -->
                          <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -419,10 +413,25 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Item 5: Corrected and collapsed by default -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                   How to ensure results are consistent and meaningful?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>We use strict protocols including fixed random seeds, fixed training data order (if same data), and deterministic testing. For a comprehensive and fair assessment, we evaluate models on a diverse suite of 10 language modeling benchmarks and 16 VQA benchmarks and employ a robust parsing strategy to handle various answer formats for VQAs.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+  
 
 
 
